@@ -1,2 +1,2 @@
-# arduino-soil-moisture-monitoring
+# Soil moisture monitoring
 Use Arduino to determine the soil moisture of your sample.
