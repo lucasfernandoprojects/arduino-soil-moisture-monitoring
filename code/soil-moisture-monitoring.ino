@@ -1,63 +1,54 @@
-#include <LiquidCrystal_I2C.h>  // Include LiquidCrystal_I2C library
+// ================================================================================
+// Read values from a soil moisture sensor and blink LEDs accordingly
+// This code works with resistance-based soil moisture sensors
+// Created on 17 July 2024
+// Created by Lucas Fernando (https://www.youtube.com/@lucasfernandochannel)
+// You are free to use this code the way you want
+// ================================================================================
 
-int led_green = 2;
-int led_yellow = 3;
-int led_red = 4;
-int sensor_input = A0;
-LiquidCrystal_I2C lcd(0x27, 16, 2); // Set the LCD address to 0x27 for a 16 chars and 2 line display
+#define GREEN_LED 2 // Green LED connected to digital pin 2
+#define YELLOW_LED 3 // Yellow LED connected to digital pin 3
+#define RED_LED 4 // Red LED connected to digital pin 4
+#define SENSOR_PIN A5 // Soil moisture sensor connected to analog pin A5
+// Defining soil moisture readings thresholds
+// From 0 to 500 - extremely wet
+// From 501 to 800 - wet
+// From 801 - dry
+#define DRY_THRESHOLD 800
+#define WET_THRESHOLD 500
 
-void setup()
-{
-  pinMode(led_green, OUTPUT);
-  pinMode(led_yellow, OUTPUT);
-  pinMode(led_red, OUTPUT);
-  pinMode(sensor_input, INPUT);
-  
-  digitalWrite(led_green, LOW);
-  digitalWrite(led_yellow, LOW);
-  digitalWrite(led_red, LOW);
-  
-  lcd.begin();
-  lcd.backlight();
+void setup() {
+  pinMode(GREEN_LED, OUTPUT);
+  pinMode(YELLOW_LED, OUTPUT);
+  pinMode(RED_LED, OUTPUT);
+
+  digitalWrite(GREEN_LED, LOW);
+  digitalWrite(YELLOW_LED, LOW);
+  digitalWrite(RED_LED, LOW);
+
+  Serial.begin(9600);
 }
 
-void loop()
-{
-  // Lowest value - 0 (extremely  dry)
-  // Highest value - 868 (extremely weat)
-  int reading_value = analogRead(sensor_input);
-  int converted_value = map(reading_value, 0, 868, 0, 100);
-  
-  lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print("Reading:");
-  lcd.setCursor(9, 0);
-  lcd.print(converted_value);
-  if (converted_value < 10) {
-  	lcd.setCursor(10, 0);
-  } else if (converted_value >= 10 && converted_value <= 99) {
-  	lcd.setCursor(11, 0);
-  } else {
-    lcd.setCursor(12, 0);
-  }
-  lcd.print("%");
-  lcd.setCursor(0, 1);
+void loop() {
+  int sensorValue = analogRead(SENSOR_PIN);
+  // Print the sensor reading values
+  Serial.print("Soil moisture sensor value: ");
+  Serial.println(sensorValue);
 
-  if (reading_value >= 0 && reading_value < 289) {
-    lcd.print("Extremely dry");
-    digitalWrite(led_green, LOW);
-    digitalWrite(led_yellow, LOW);
-    digitalWrite(led_red, HIGH);
-  } else if (reading_value >= 289 && reading_value < 578) {
-    lcd.print("Wet");
-  	digitalWrite(led_green, LOW);
-    digitalWrite(led_yellow, HIGH);
-    digitalWrite(led_red, LOW);
+  if(sensorValue > 0 && sensorValue <= WET_THRESHOLD) {
+    // Extremely wet (green LED)
+    digitalWrite(GREEN_LED, HIGH);
+    digitalWrite(YELLOW_LED, LOW);
+    digitalWrite(RED_LED, LOW);
+  } else if (sensorValue > WET_THRESHOLD && sensorValue <= DRY_THRESHOLD) {
+    // Wet (yellow LED)
+    digitalWrite(GREEN_LED, LOW);
+    digitalWrite(YELLOW_LED, HIGH);
+    digitalWrite(RED_LED, LOW);
   } else {
-    lcd.print("Extremely wet");
-    digitalWrite(led_green, HIGH);
-    digitalWrite(led_yellow, LOW);
-    digitalWrite(led_red, LOW);
+    // Extremely dry (red LED)
+    digitalWrite(GREEN_LED, LOW);
+    digitalWrite(YELLOW_LED, LOW);
+    digitalWrite(RED_LED, HIGH);
   }
-  delay(1000);
 }
