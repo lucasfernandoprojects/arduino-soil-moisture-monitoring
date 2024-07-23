@@ -40,6 +40,7 @@ Connect the 5V and GND ports of the Arduino to the breadboard. Attach the sensor
     <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/2-6.png" width="400" height="250" style="margin: 10px;">
 </div>
 
+
 Then, access the folder code, download the **_soil-moisture-monitoring.ino_** file and upload it to Arduino.
 
 Let's see our project working. After diving the sensor legs completely into the glass of water, we have an extremely wet situation. Diving only a small part of the sensor, gives us the wet scenario and the system responds accordingly. Now if we remove the sensor from the water, the reading value is so low that the red LED is turned on, indicating a extremely dry scenario.
@@ -52,6 +53,7 @@ Let's see our project working. After diving the sensor legs completely into the 
     <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/3-5.png" width="400" height="250" style="margin: 10px;">
     <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/3-6.png" width="400" height="250" style="margin: 10px;">
 </div>
+
 
 While resistance-based sensors are cheaper, they suffer from corrosion and, therefore, have a short lifespan. That’s why you should not use them in real-life applications. On the other hand, the capacitance-based sensors are usually more expensive, but they are more durable because of the way they work and are manufactured. 
 
@@ -83,6 +85,7 @@ Connect the relay module to the Arduino and power it with batteries. Attach the 
     <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/5-6.png" width="400" height="250" style="margin: 10px;">
     <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/5-7.png" width="400" height="250" style="margin: 10px;">
 </div>
+
 
 As you may noticed, every time we send a signal from Arduino port 2, the relay will close the water pump circuit and, then, water will flow to irrigate the plant. When we stop this signal, the water pump will turn off. The sensor readings will inform Arduino when is the right time to start or stop the signal from port 2.
 
