@@ -13,6 +13,8 @@ Now that you understood the principles behind these sensors, it's time to see th
 ## PROJECTS
 First, we’ll build a simple soil moisture monitor with Arduino, according to this [schematics](https://www.tinkercad.com/things/jnLMTXYCo3r-soil-moisture-sensor-schematics).
 
+![Soil moisture monitoring schematics available on Tinkercad.](https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/1-1.png)
+
 Here’s what you need:
 
 * Arduino board
@@ -24,6 +26,16 @@ Here’s what you need:
 * Glass of water 
 
 Connect the 5V and GND ports of the Arduino to the breadboard. Attach the sensor power supply pins to the 5V and GND rows and the signal pin to A5. Set up the LEDs with resistors on the breadboard, connecting them to GND and ports 2, 3, and 4.
+
+
+<div style="display: flex; flex-wrap: wrap;">
+    <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/2-1.png" width="300" height="200" style="margin: 10px;">
+    <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/2-2.png" width="300" height="200" style="margin: 10px;">
+    <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/2-3.png" width="300" height="200" style="margin: 10px;">
+    <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/2-4.png" width="300" height="200" style="margin: 10px;">
+    <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/2-5.png" width="300" height="200" style="margin: 10px;">
+    <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/2-6.png" width="300" height="200" style="margin: 10px;">
+</div>
 
 Then, access the folder code, download the **_soil-moisture-monitoring.ino_** file and upload it to Arduino.
 
