@@ -1,5 +1,5 @@
 # Soil moisture monitoring
-* *I recently posted a tutorial on YouTube explaining everything you can read in this article. If you are interesting at watching it, here is the video.* *
+*I recently posted a tutorial on YouTube explaining everything you can read in this article. If you are interesting at watching it, here is the video.*
 
 ## THEORY
 A soil moisture sensor is a tiny device that measures the water level in soil. They can work alone or in automated systems for real-time monitoring, making them crucial for several applications in agriculture, gardening, environmental monitoring, and more.
