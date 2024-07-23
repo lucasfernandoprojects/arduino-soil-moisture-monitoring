@@ -1,6 +1,8 @@
 # Soil moisture monitoring
 *I recently posted a tutorial on YouTube explaining everything you can read in this article. If you are interesting at watching it, here is the video.*
 
+[![ Soil Moisture Sensor - Arduino Tutorial ](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=C_OxBOmjZ-k&t=4s)
+
 ## THEORY
 A soil moisture sensor is a tiny device that measures the water level in soil. They can work alone or in automated systems for real-time monitoring, making them crucial for several applications in agriculture, gardening, environmental monitoring, and more.
 
@@ -53,6 +55,7 @@ Let's see our project working. After diving the sensor legs completely into the 
     <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/3-5.png" width="400" height="250" style="margin: 10px;">
     <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/3-6.png" width="400" height="250" style="margin: 10px;">
 </div>
+</br>
 
 While resistance-based sensors are cheaper, they suffer from corrosion and, therefore, have a short lifespan. That’s why you should not use them in real-life applications. On the other hand, the capacitance-based sensors are usually more expensive, but they are more durable because of the way they work and are manufactured. 
 
@@ -84,6 +87,7 @@ Connect the relay module to the Arduino and power it with batteries. Attach the 
     <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/5-6.png" width="400" height="250" style="margin: 10px;">
     <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/5-7.png" width="400" height="250" style="margin: 10px;">
 </div>
+</br>
 
 As you may noticed, every time we send a signal from Arduino port 2, the relay will close the water pump circuit and, then, water will flow to irrigate the plant. When we stop this signal, the water pump will turn off. The sensor readings will inform Arduino when is the right time to start or stop the signal from port 2.
 
@@ -92,4 +96,3 @@ If you power the Arduino board continuously and add water to the reservoir from 
 ## CONCLUSION
 
 Thank you for reading this tutorial. If you liked it, you will probably enjoy the [article](https://github.com/lucasfernandoprojects/arduino-alarm-system) that I wrote about ultrasonic sensors and how to build an alarm system with them. 
-
