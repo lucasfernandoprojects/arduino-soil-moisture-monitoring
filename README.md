@@ -1,7 +1,7 @@
 # Soil moisture monitoring
 *I recently posted a tutorial on YouTube explaining everything you can read in this article. If you are interesting at watching it, here is the video.*
 
-[![ Soil Moisture Sensor - Arduino Tutorial ](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=C_OxBOmjZ-k&t=4s)
+[![ Soil Moisture Sensor - Arduino Tutorial ](https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/soil-moisture-sensor-thumb-1.png)](https://www.youtube.com/watch?v=C_OxBOmjZ-k&t=4s)
 
 ## THEORY
 A soil moisture sensor is a tiny device that measures the water level in soil. They can work alone or in automated systems for real-time monitoring, making them crucial for several applications in agriculture, gardening, environmental monitoring, and more.
