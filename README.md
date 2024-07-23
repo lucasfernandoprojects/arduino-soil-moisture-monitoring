@@ -31,7 +31,7 @@ Here’s what you need:
 * Three 220 ohm resistors
 * Glass of water 
 
-Connect the 5V and GND ports of the Arduino to the breadboard. Attach the sensor power supply pins to the 5V and GND rows and the signal pin to A5. Set up the LEDs with resistors on the breadboard, connecting them to GND and ports 2, 3, and 4.
+Connect the 5V and GND ports of the Arduino to the breadboard. Attach the sensor power supply pins to the 5V and GND rows and the signal pin to A5. Set up the LEDs with resistors on the breadboard, connecting them to GND and ports 2, 3, and 4. Then, access the folder _code_, download the **_soil-moisture-monitoring.ino_** file and upload it to Arduino.
 
 <div style="display: flex; flex-wrap: wrap;">
     <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/2-1.png" width="400" height="250" style="margin: 10px;">
@@ -42,8 +42,6 @@ Connect the 5V and GND ports of the Arduino to the breadboard. Attach the sensor
     <img src="https://github.com/lucasfernandoprojects/arduino-soil-moisture-monitoring/blob/main/images/2-6.png" width="400" height="250" style="margin: 10px;">
 </div>
 </br>
-
-Then, access the folder code, download the **_soil-moisture-monitoring.ino_** file and upload it to Arduino.
 
 Let's see our project working. After diving the sensor legs completely into the glass of water, we have an extremely wet situation. Diving only a small part of the sensor, gives us the wet scenario and the system responds accordingly. Now if we remove the sensor from the water, the reading value is so low that the red LED is turned on, indicating a extremely dry scenario.
 
@@ -95,4 +93,4 @@ If you power the Arduino board continuously and add water to the reservoir from 
 
 ## CONCLUSION
 
-Thank you for reading this tutorial. If you liked it, you will probably enjoy the [article](https://github.com/lucasfernandoprojects/arduino-alarm-system) that I wrote about ultrasonic sensors and how to build an alarm system with them. 
+Thank you for reading this tutorial. If you liked it, you will probably enjoy the [article](https://github.com/lucasfernandoprojects/arduino-alarm-system) that I wrote about ultrasonic sensors and how to build an alarm system with them.
